@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login Environment Project </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/images/login.jpg" alt="login">
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Default Item -->
+      <ion-item>
+        <ion-input id="name" placeholder="Enter User Name"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-input id="password" placeholder="Enter Password" type="password"></ion-input>
+      </ion-item>
+      <br>
+      <ion-button expand="block" (click)="loginUser()">Login</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
