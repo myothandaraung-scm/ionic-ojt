@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -8,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class SimpleslidePage implements OnInit {
 
-  constructor(private toastCtrl:ToastController) { }
+  constructor(private toastCtrl:ToastController,private router:Router) { }
 
   ngOnInit() {
   }
@@ -24,5 +25,9 @@ export class SimpleslidePage implements OnInit {
     // await this.toastCtrl.create({
     //   message: "This is toast message"
     // }).then(res=>res.present())
+  }
+  nextFirstStructurePage(){   
+    console.log('ddddd')
+    this.router.navigate(['firststructure']);
   }
 }

@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'simpleslide',
     loadChildren: () => import('./simpleslide/simpleslide.module').then( m => m.SimpleslidePageModule)
   },
+  {
+    path: 'firststructure',
+    loadChildren: () => import('./firststructure/firststructure.module').then( m => m.FirststructurePageModule)
+  },
 ];
 
 @NgModule({
