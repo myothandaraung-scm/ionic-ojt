@@ -19,6 +19,30 @@ const routes: Routes = [
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'scrollpage',
+    loadChildren: () => import('./scrollpage/scrollpage.module').then( m => m.ScrollpagePageModule)
+  },
+  {
+    path: 'modalpage',
+    loadChildren: () => import('./modalpage/modalpage.module').then( m => m.ModalpagePageModule)
+  },
+  {
+    path: 'navigation',
+    loadChildren: () => import('./navigation/navigation.module').then( m => m.NavigationPageModule)
+  },
+  {
+    path: 'radiorange',
+    loadChildren: () => import('./radiorange/radiorange.module').then( m => m.RadiorangePageModule)
+  },
+  {
+    path: 'simpleslide',
+    loadChildren: () => import('./simpleslide/simpleslide.module').then( m => m.SimpleslidePageModule)
+  },
 ];
 
 @NgModule({

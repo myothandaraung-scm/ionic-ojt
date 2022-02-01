@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MainPageRoutingModule } from './main-routing.module';
+import { ScrollpagePageRoutingModule } from './scrollpage-routing.module';
 
-import { MainPage } from './main.page';
+import { ScrollpagePage } from './scrollpage.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MainPageRoutingModule
+    ScrollpagePageRoutingModule
   ],
-  declarations: [MainPage]
+  declarations: [ScrollpagePage]
 })
-export class MainPageModule {
-}
+export class ScrollpagePageModule {}

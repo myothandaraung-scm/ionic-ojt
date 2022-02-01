@@ -21,7 +21,10 @@
 
   margin: 0;
 }
-
 #container a {
   text-decoration: none;
+}
+.ripple-parent{
+  position: relative;
+  overflow: hidden;
 }

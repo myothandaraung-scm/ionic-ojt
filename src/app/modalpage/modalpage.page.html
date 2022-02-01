@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modalpage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-card-header>
+          <img src="assets/images/wind.jpg" alt="wind" (click)="clickMainPage()">
+          <ion-card-subtitle>{{ model_title }}</ion-card-subtitle>
+          <ion-card-title>{{card_title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          The environmental impact of wind power when compared to that of fossil fuel power, is relatively minor
+        </ion-card-content>
+        <ion-button expand="block" (click)="closeModel()">Close</ion-button>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>

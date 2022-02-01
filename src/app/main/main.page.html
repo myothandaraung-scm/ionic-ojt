@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="success">
-    <ion-title>Main</ion-title>
+    <ion-title>Menu slidebar and accordian tabs</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -8,5 +8,74 @@
 </ion-header>
 
 <ion-content>
+  <!-- ion-breadcrumbs -->
+  <ion-breadcrumbs color="secondary">
+    <ion-breadcrumb href="home">
+      <ion-icon slot="start" name="home" color="secondary"></ion-icon>
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="main">Main</ion-breadcrumb>
+    <ion-breadcrumb href="next">Next</ion-breadcrumb>
+  </ion-breadcrumbs>
+  <!-- ion-accordion -->
+  <ion-accordion-group value="facts">
+    <ion-accordion value="colors">
+      <ion-item slot="header">
+        <ion-label>Environment Science</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>Important Qualities</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Required Education</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Required Certifications</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+    <ion-accordion value="numbers">
+      <ion-item slot="header">
+        <ion-label>Numbers</ion-label>
+      </ion-item>
 
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>1</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>2</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>3</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+  <!-- ion-checkbox -->
+  <ion-list>
+    <ion-item *ngFor="let entry of listitems">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <!-- ion-ripple-effect -->
+  <ion-button expand="block">
+    Right Icon
+    <ion-icon slot="end" name="star"></ion-icon>
+    <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+  </ion-button>
+    <!-- ion-chip -->
+    <ion-chip (click)="registerPage()">
+      <ion-icon name="pin" color="primary"></ion-icon>
+      <ion-label>Register page</ion-label>
+      <ion-icon name="close"></ion-icon>
+    </ion-chip>
+
+    <!-- ion modal -->
+    <div id="container">
+      <ion-button (click)="openIonModal()">Open Modal</ion-button>
+      <!-- <strong *ngIf="modelData">{{modelData}}</strong> -->
+    </div>
 </ion-content>

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Default Buttons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card>
+        <img src="assets/images/water.jpg" alt="water">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/images/water.jpg" alt="water">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/images/tree.jpg" alt="water">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/images/leaf.jpeg" alt="water">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/images/wind.jpg" alt="water">
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/images/background.jpg" alt="water">
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <!-- toast -->
+  <ion-list>
+    <ion-list-header>Toast Message</ion-list-header>
+    <ion-item>
+      <ion-button (click)="showtoastMessage()">Show Message</ion-button>
+    </ion-item>
+  </ion-list>
+  <!-- ion-text -->
+  <ion-list>
+    <ion-list-header>Ion Typography</ion-list-header>
+    <ion-item>
+      <ion-text color="primary">
+        <p>Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed and built by Ionic.</p>
+      </ion-text>
+    </ion-item>
+  </ion-list>
+  <!-- ion tabs -->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="music">
+        <ion-icon name="logo-tiktok"></ion-icon>
+        <ion-label>Music</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+      <ion-tab-button tab="phone">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-label>Phone</ion-label>
+        <ion-badge>1</ion-badge>
+      </ion-tab-button> 
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
