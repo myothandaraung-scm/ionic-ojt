@@ -9,6 +9,7 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./radiorange.page.scss'],
 })
 export class RadiorangePage implements OnInit {
+  refreshdata:any;
   data:any;
   searchData: any;
   items: string[];
@@ -27,7 +28,7 @@ export class RadiorangePage implements OnInit {
   doRefresh(event) {
     console.log('Begin async operation');
     setTimeout(() => {
-      this.data = ConstantData.basedata
+      this.refreshdata = ConstantData.basedata
       event.target.complete();
     }, 2000);
   }

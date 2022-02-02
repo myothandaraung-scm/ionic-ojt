@@ -18,6 +18,31 @@
       refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
+  <div *ngIf="refreshdata"> 
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          Refresh Data
+        </ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            {{ refreshdata.heading }}
+          </h3>
+          <p>
+            {{ refreshdata.param1 }}
+          </p>
+          <p>
+            {{ refreshdata.param2 }}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
   <ion-list>
     <ion-radio-group value="biff">
       <ion-list-header>

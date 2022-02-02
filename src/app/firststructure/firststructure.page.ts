@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-firststructure',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirststructurePage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
-
+  toggleTheme(event){
+    console.log(event)
+    if(event.detail.checked) {
+      document.body.setAttribute('color-theme','dark')
+    } else {
+      document.body.removeAttribute('color-theme')
+    }
+  }
+  registerForm() {
+    this.router.navigate(['registerform'])
+  }
 }

@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: 'firststructure',
     loadChildren: () => import('./firststructure/firststructure.module').then( m => m.FirststructurePageModule)
+  },  {
+    path: 'registerform',
+    loadChildren: () => import('./registerform/registerform.module').then( m => m.RegisterformPageModule)
   },
+
 ];
 
 @NgModule({
