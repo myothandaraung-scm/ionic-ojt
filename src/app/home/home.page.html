@@ -48,4 +48,28 @@
       <ion-badge color="secondary">77k</ion-badge>
     </ion-item>
   </ion-card>
+  <ion-button shape="round" expand="block" (click)="nextPage()">Photo</ion-button>
+  
+  <ion-card>
+    <ion-button color="danger" (click)="scanBRcode()" expand="block">
+        Scan Barcode
+    </ion-button>
+  </ion-card>
+  <ion-card>
+    <div *ngIf="scannedBarCode">
+      <ion-item>
+        Scanned code output: <strong>{{scannedBarCode["text"]}}</strong>
+      </ion-item>
+      <ion-item>
+        Scanned code output: <strong>{{ scannedBarCode["format"] }}</strong>
+    </ion-item>
+    </div>
+  </ion-card>
+  <ion-card>
+    <h3>Generate New QR Code</h3>
+    <ion-input placeholder="Enter input" [(ngModel)]="encodedData"></ion-input>
+    <ion-button color="primary" (click)="generateBarCode()" expand="block">
+        QR Code Create
+    </ion-button>
+</ion-card>
 </ion-content>

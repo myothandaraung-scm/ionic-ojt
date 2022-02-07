@@ -25,12 +25,21 @@
         <ion-input type="email" name="email" required [(ngModel)]="data.email" email></ion-input>
       </ion-item>
   
+      <!-- <ion-item [hidden]="f.controls.email && (!f.controls.email.pristine || !isSubmitted)" lines="none">
+        <ion-text color="danger">Email is required!</ion-text>
+        <ion-icon name="information-circle-outline" color="danger" slot="start" class="ion-no-margin"></ion-icon>
+      </ion-item>
+  
+      <ion-item [hidden]="f.controls.email && (!isSubmitted && f.controls.email.valid)" lines="none">
+        <ion-text color="danger">Email is invalid!</ion-text>
+        <ion-icon name="information-circle-outline" color="danger" slot="start" class="ion-no-margin"></ion-icon>
+      </ion-item> -->
       <ion-item [hidden]="f.controls.email && (!f.controls.email.pristine || !isSubmitted)" lines="none">
         <ion-text color="danger">Email is required!</ion-text>
         <ion-icon name="information-circle-outline" color="danger" slot="start" class="ion-no-margin"></ion-icon>
       </ion-item>
   
-      <ion-item [hidden]="!isSubmitted && (data.email && f.controls.email.valid)" lines="none">
+      <ion-item [hidden]="f.controls.email && (f.controls.email.valid || !isSubmitted)" lines="none">
         <ion-text color="danger">Email is invalid!</ion-text>
         <ion-icon name="information-circle-outline" color="danger" slot="start" class="ion-no-margin"></ion-icon>
       </ion-item>
@@ -96,5 +105,6 @@
         <ion-button type="submit" shape="round" class="ion-text-capitalize">Submit</ion-button>
       </ion-row>
     </form>
-  </ion-card>
+  </ion-card> 
+  <ion-button shape="round" expand="block" class="ion-text-capitalize" (click)="nextPage()">Photo</ion-button>
 </ion-content>

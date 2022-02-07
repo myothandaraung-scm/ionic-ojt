@@ -26,10 +26,14 @@ export class RegisterformPage implements OnInit {
   onSubmit(myForm: NgForm) {
     this.isSubmitted = true;
     console.log('---valid check---', myForm.valid);
+    console.log(this.isSubmitted)
     if(myForm.valid)
     {
-      this.router.navigate(['/nextstep']);
+      console.log('myform')
     }
+  }
+  nextPage(){
+    this.router.navigate(['photogallery']);
   }
 
   ngOnInit() {

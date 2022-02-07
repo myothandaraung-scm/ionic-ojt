@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'registerform',
     loadChildren: () => import('./registerform/registerform.module').then( m => m.RegisterformPageModule)
   },
+  {
+    path: 'photogallery',
+    loadChildren: () => import('./photogallery/photogallery.module').then( m => m.PhotogalleryPageModule)
+  },
 
 ];
 
